@@ -1,0 +1,11 @@
+body {
+    background-color: #101720;
+}
+
+.maindisplay {
+    display: flex;
+}
+
+.button {
+    border: none;
+}

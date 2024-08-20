@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/myaccount.css">
+    <link rel="stylesheet" href="style/responsive.css">
+</head>
+
+<body>
+
+    <div class="container text-center text-light">
+        <div class="row">
+            <h1 class="display-4 text-light mb-3">
+                <span class="myaccountspan"> MY <i class="fa-solid fa-chart-pie"
+                        style="color: #2bff00;"></i>ACCOUNT</span>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="alert alert-secondary" id="divbalance"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- form -->
+                <select class="form-select" aria-label="Default select example" id="select">
+                    <option selected value="income">Income</option>
+                    <option value="expense">Exepnse</option>
+                </select>
+                <div class="form-floating text-dark my-3">
+                    <input type="text" class="form-control" id="description" placeholder="Description" />
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating text-dark">
+                    <input type="number" class="form-control" id="amount" placeholder="0" />
+                    <label for="amount">Amount</label>
+                </div>
+                <button onclick="addAction()" type="button" class="btn btn-primary w-100 mt-3">Add</button>
+            </div>
+
+            <div class="col-sm-8">
+                <table class="table table-striped">
+                    <thead>
+                        <th class="col-5">Description</th>
+                        <th class="col-5">Amount</th>
+                        <th class="col-1">Options</th>
+                        <th></th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts/myAccount.js" type="module"></script>
+
+</html>
