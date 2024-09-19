@@ -19,7 +19,7 @@ window.addAction = function addAction() {
 
 function updateScreen() {
     divBalance.innerHTML = "";
-    divBalance.innerHTML = actionsManager.calcBalance();
+    divBalance.innerHTML = "Balance: " + actionsManager.calcBalance();
     let tbody = document.getElementById("tbody")
     tbody.innerHTML = "";
     for (let action of actionsManager.Actions) {
